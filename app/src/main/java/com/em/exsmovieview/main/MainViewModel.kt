@@ -16,6 +16,8 @@ import com.em.exsmovieview.BR
  */
 class MainViewModel : BaseObservable() {
     lateinit var layoutManager: RecyclerView.LayoutManager
+    lateinit var itemDecoration: RecyclerView.ItemDecoration
+
     var rvAdapter: MovieAdapter? = null
         set(value) {
             field = value;notifyPropertyChanged(BR.rvAdapter)

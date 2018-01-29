@@ -27,9 +27,10 @@ abstract class BaseBindingAdapter<Data, in Binding>(val dataList: List<Data>) : 
     }
 
     override fun onBindViewHolder(holder: BindingViewHolder, position: Int) {
-        val binding = DataBindingUtil.getBinding<Binding>(holder.itemView)
-        onSetData(binding, dataList[position])
-        binding.executePendingBindings()
+        DataBindingUtil.getBinding<Binding>(holder.itemView)?.let { binding ->
+            onSetData(binding, dataList[position])
+            binding.executePendingBindings()
+        }
     }
 
     override fun getItemCount(): Int = dataList.size

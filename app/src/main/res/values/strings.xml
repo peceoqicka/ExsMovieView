@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ExsMovieView</string>
+    <string name="score">评分%1$.1f</string>
+    <string name="hot">正在热映</string>
 </resources>

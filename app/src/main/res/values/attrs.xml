@@ -2,4 +2,5 @@
 <resources>
     <attr name="imageUrl" format="reference" />
     <attr name="rvAdapter" format="reference" />
+    <attr name="itemDecoration" format="reference" />
 </resources>

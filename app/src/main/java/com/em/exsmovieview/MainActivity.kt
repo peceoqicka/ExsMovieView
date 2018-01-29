@@ -9,9 +9,11 @@ import com.em.exsmovieview.data.HotListService
 import com.em.exsmovieview.databinding.ActivityMainBinding
 import com.em.exsmovieview.main.MainViewModel
 import com.em.exsmovieview.main.MovieAdapter
+import com.em.exsmovieview.main.MovieItemDecoration
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import org.jetbrains.anko.AnkoLogger
+import org.jetbrains.anko.dimen
 import org.jetbrains.anko.error
 import org.jetbrains.anko.info
 import retrofit2.Retrofit
@@ -29,6 +31,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         binding.model = MainViewModel().also { m ->
             m.layoutManager = LinearLayoutManager(this,
                     LinearLayoutManager.HORIZONTAL, false)
+            m.itemDecoration = MovieItemDecoration(dimen(R.dimen.px_20), dimen(R.dimen.px_30))
         }
 
         request()
