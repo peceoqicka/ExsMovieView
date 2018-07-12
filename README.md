@@ -11,3 +11,4 @@ App key techs:
 And development language is **Kotlin**.
 
 Finally use **Proguard** to shrink app and protect source code.
+
